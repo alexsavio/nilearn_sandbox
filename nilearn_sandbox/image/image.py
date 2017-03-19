@@ -7,7 +7,6 @@ See also nilearn.signal.
 
 import collections
 
-import numexpr as ne
 from scipy import ndimage
 from scipy.stats import scoreatpercentile
 import copy
@@ -73,6 +72,8 @@ def math_img(formula, **imgs):
     in FSL.
 
     """
+    import numexpr as ne
+
     try:
         # Check that input images are valid niimg and have a compatible shape
         # and affine.
